@@ -4,16 +4,16 @@ This project is a web application for predicting sleep disorders based on variou
 
 ## Installation
 
-1. Install `django-admin` using pip:
-
-    ```bash
-    pip install django-admin
-    ```
-
-2. Activate the conda environment:
+1. Activate the conda environment:
 
     ```bash
     conda activate env
+    ```
+
+2. Install `django-admin` using pip:
+
+    ```bash
+    pip install django-admin
     ```
 
 ## Running the Project
