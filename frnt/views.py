@@ -23,6 +23,6 @@ def index(request):
         model = pickle.load(open("D:/WEB/sleepDisorder/frnt/sleep_disorder.pkl","rb"))
         output = model.predict(inp)[0]
         print(output)
-        context = {'out':output}
+        context = {'out':outputs}
         return render(request,'index.html', {'out':output})
     return render(request,"index.html")
