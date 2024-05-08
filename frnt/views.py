@@ -20,9 +20,10 @@ def index(request):
         form_values = [age, gender, occup, sd, qs, pal, sl, bmi, hr, steps, mxbp, minbp]
         inp = np.array(form_values).reshape(1,-1)
 
-        model = pickle.load(open("D:/WEB/sleepDisorder/frnt/sleep_disorder.pkl","rb"))
+        with open("D:/WEB/sleepDisorder/frnt/model.pkl", 'rb') as file:
+            model = pickle.load(file)
         output = model.predict(inp)[0]
         print(output)
-        context = {'out':outputs}
+        context = {'out':output}
         return render(request,'index.html', {'out':output})
     return render(request,"index.html")
